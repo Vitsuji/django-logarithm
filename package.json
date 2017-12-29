@@ -1,0 +1,9 @@
+{
+    "name": "Logarith"m,
+    "dependencies": [
+        "gulp-sass",
+        "gulp",
+        "gulp-clean-css",
+        "gulp-imagemin"
+    ]
+}

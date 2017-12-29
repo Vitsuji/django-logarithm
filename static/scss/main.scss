@@ -1,1 +1,5 @@
 /* --------- Variables --------- */
+$var: 'sans';
+h1{
+    font-family: $var;
+}

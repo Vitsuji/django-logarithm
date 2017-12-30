@@ -1,5 +1,65 @@
 /* --------- Variables --------- */
-$var: 'sans';
-h1{
-    font-family: $var;
+$primary_color: #663399;
+$secondary_color: #069E2D;
+$expanse_color: #fff;
+$abstraction_color: #d7d7d7;
+$visible_abstraction_color: #8B8989;
+$active_button_important_color: green;
+
+$header_font: 'Josefin Slab', Josefin Slab, sans-serif;
+$content_font: 'Raleway', Raleway, sans-serif;
+
+$bp-mobile: 680px;
+$bp-tablet: 980px;
+$bp-desktop: 1024px;
+$bp-widescreen: 1920px;
+$bp-quadhd: 3840px;
+
+$primary_border: 1px solid #d7d7d7;
+
+$primary_transition: 0.3s all;
+/* [============] Mixins [============] */
+
+@mixin mobile {
+   @media (max-width: #{$bp-mobile}){
+    @content;
+  }
 }
+
+@mixin reverse_mobile {
+   @media (min-width: #{$bp-mobile}){
+    @content;
+  }
+}
+
+@mixin widescreen {
+  @media (min-width: #{$bp-desktop}) {
+   @content;
+ }
+}
+
+@mixin quadhd {
+  @media (min-width: #{$bp-widescreen}) and (max-width: #{$bp-quadhd}) {
+   @content;
+ }
+}
+
+@mixin tablet {
+   @media (min-width: #{$bp-mobile}) and (max-width: #{$bp-desktop - 1px}){
+    @content;
+  }
+}
+
+@mixin desktop {
+   @media (min-width: #{$bp-desktop}) and (max-width: #{$bp-widescreen}){
+    @content;
+  }
+}
+
+/* [============] Imports [============] */
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:400,700|Raleway');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@import "general";
+@import "navbar";

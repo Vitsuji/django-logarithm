@@ -1,3 +1,87 @@
 /* --------- Variables --------- */
-h1 {
-  font-family: "sans"; }
+/* [============] Mixins [============] */
+/* [============] Imports [============] */
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab:400,700|Raleway");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
+h1, h1, h3, h4, h5, h6 {
+  font-family: "Josefin Slab", Josefin Slab, sans-serif; }
+
+p, a {
+  font-family: "Raleway", Raleway, sans-serif; }
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  border-bottom: 1px solid #d7d7d7; }
+
+@media (min-width: 680px) {
+  ul.topnav.responsive {
+    position: relative; } }
+
+ul.topnav li {
+  float: right;
+  vertical-align: middle; }
+
+ul.topnav li:first-child {
+  float: left;
+  vertical-align: middle; }
+
+ul.topnav li a {
+  display: inline-block;
+  color: #8B8989;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s all;
+  font-size: 22px;
+  font-family: "Josefin Slab", Josefin Slab, sans-serif; }
+  @media (min-width: 680px) {
+    ul.topnav li a {
+      border: none; } }
+
+ul.topnav li:first-child a {
+  color: green;
+  font-size: 30px;
+  border: none; }
+
+ul.topnav.responsive li a:not(.logo):not(.btn_menu):hover {
+  color: green;
+  border-bottom: 1px solid #d7d7d7; }
+
+ul.topnav.responsive li:nth-child(3) a {
+  border-top: 1px solid #d7d7d7; }
+
+ul.topnav li.icon {
+  display: none; }
+  @media (max-width: 680px) {
+    ul.topnav li.icon {
+      float: right;
+      display: inline-block; } }
+
+@media (max-width: 680px) {
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0; } }
+
+@media (max-width: 680px) {
+  ul.topnav li:not(:first-child):not(:nth-child(2)) {
+    display: none; } }
+
+ul.topnav.responsive li:not(:first-child) {
+  float: none;
+  display: inline; }
+
+ul.topnav.responsive li a {
+  display: block;
+  text-align: left; }
+
+ul.topnav.responsive li {
+  float: none;
+  display: inline; }

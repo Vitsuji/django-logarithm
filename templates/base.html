@@ -1,13 +1,19 @@
 <!doctype html>
-{% load staticfiles %}
+{% load static %}
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width" />
         <title>{% block title %}{% endblock %}Logarithm</title>
         <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" media="screen" />
+        <script type="text/javascript" src="{% static "js/navbar.js" %}"></script>
     </head>
     <body>
+        {% block universal-navbar %}
+        {% endblock %}
+
         {% block content %}
         {% endblock %}
+
     </body>
 </html>

@@ -6,14 +6,49 @@
         <meta name="viewport" content="width=device-width" />
         <title>{% block title %}{% endblock %}Logarithm</title>
         <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" media="screen" />
-        <script type="text/javascript" src="{% static "js/navbar.js" %}"></script>
+        <script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
     </head>
     <body>
-        {% block universal-navbar %}
-        {% endblock %}
+        <nav>
+            <ul class="topnav" id="myTopnav">
+                <li>
+                    <a classs="logo" href="index.php">Logarithm</a>
+                </li>
+                <li class="icon">
+                    <a class="btn_menu" href="javascript:void(0);" onclick="openNav()">
+                        <i class="material-icons">menu</i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="signup.php">Sign Up</a>
+                </li>
+                <li>
+                    <a href="signin.php">Sign In</a>
+                </li>
+                <li>
+                    <a href="bout.html">About</a>
+                </li>
+                <li>
+                    <a href="index.php">Home</a>
+                </li>
+            </ul>
+        </nav>
 
         {% block content %}
         {% endblock %}
 
+        <div class="footer">
+            <p class="inside_footer">&copy; Logarithm,Inc.</p>
+            <p class="inside_footer_left"><a href="ts.html">Terms & Services</a></p>
+            <p class="inside_footer_left"><a href="prsec.html">Privacy & Security</a></p>
+            <p class="inside_footer_left"><a href="faq.html">FAQ</a></p>
+
+            <p class="inside_footer_right"><a href="signup.php">Sign Up</a></p>
+            <p class="inside_footer_right"><a href="signin.php">Sign In</a></p>
+            <p class="inside_footer_right"><a href="contact.html">Contact</a></p>
+            <p class="inside_footer_right"><a href="bout.html">About</a></p>
+        </div>
     </body>
 </html>
+

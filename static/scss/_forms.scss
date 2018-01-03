@@ -1,0 +1,79 @@
+.form_holder .btn-style {
+    margin-top: 7px;
+}
+
+.front_maininput {
+    border: 3px solid rebeccapurple;
+}
+
+.form_holder input {
+    width: 35%;
+	border-radius: 10px;
+	outline: none;
+	padding: 10px;
+	font-family: $content_font;
+	font-size: 1em;
+	transition: border 0.5s;
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+    margin-left:32.5%;
+    display:block;
+    margin-top:7px;
+
+    @include widescreen {
+        width:100%;
+    }
+}
+
+.form_holder input:focus {
+	border: solid 3px $expanse_color;
+}
+
+.button {
+    border:none;
+    outline:none;
+	border-radius : 6px;
+	padding : 10px 20px;
+    background-color: $secondary_color;
+    color: $expanse_color;
+    font-family: $content_font;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.btn-style {
+	font-size : 20px;
+    width:35%;
+    transition: border 0.5s;
+}
+
+.btn-style:hover {
+    cursor:pointer;
+}
+
+.btn-stylemob {
+	font-size: 20px;
+	padding: 3% 20px;
+    width: 75%;
+    transition: border 0.5s;
+    margin-left: 7%;
+
+    @include reverse_mobile {
+        display: none;
+    }
+
+    @include mobile {
+        margin: 20px auto;
+    }
+}
+
+.btn-stylemob a {
+    color: $expanse_color;
+    text-decoration: none;
+    font-weight: 600;
+}

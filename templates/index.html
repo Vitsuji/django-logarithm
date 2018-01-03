@@ -1,32 +1,72 @@
+
 {% extends "base.html" %}
 
-{% block universal-navbar %}
-<ul class="topnav" id="myTopnav">
-    <li>
-        <a classs="logo" href="index.php">Logarithm</a>
-    </li>
-    <li class="icon">
-        <a class="btn_menu" href="javascript:void(0);" onclick="openNav()">
-            <i class="material-icons">menu</i>
-        </a>
-    </li>
-
-    <li>
-        <a href="signup.php">Sign Up</a>
-    </li>
-    <li>
-        <a href="signin.php">Sign In</a>
-    </li>
-    <li>
-        <a href="bout.html">About</a>
-    </li>
-    <li>
-        <a href="index.php">Home</a>
-    </li>
-</ul>
-{% endblock %}
-
-
 {% block content %}
-    <h1>Logarithm... in Django!</h1>
+
+<div class="main_content">
+    <div class ="main_entry">
+        <h1>"If something does not exist - create it."</h1>
+        <p>- Vitsuji Aura</p>
+    </div>
+    <div class="formgroup">
+        <div class= "form_holder">
+            <form method="post">
+                <!--[if IE 8]><h3 style="color:white;text-align:center;">Username</h3><![endif]-->
+                <input placeholder="Username"type="text" class="front_maininput" onkeypress="on_enter(event, 'up');" name="username" required>
+                <!--[if IE 8]><h3 style="color:white;text-align:center;">Email</h3><![endif]-->
+                <input placeholder="Email"type="email" class="front_maininput" onkeypress="on_enter(event, 'up');"name="email" required/>
+                <!--[if IE 8]><h3 style="color:white;text-align:center;">Password</h3><![endif]-->
+                <input placeholder="Password"type="password" class="front_maininput"  onkeypress="on_enter(event, 'up');" name="password" required>
+                <div type="submit" name="btn" class="btn-style button" onclick="check_signup();">Sign Up and Start Developing</div>
+            </form>
+            <p>
+                <i>By signing up you agree to our Terms of Services and Privacy Policy</i>
+            </p>
+        </div>
+    </div>
+    <div class="btn-stylemob button">
+        <a href="signup.php">Start Developing Now</a>
+    </div>
+</div>
+<div class= "general_content">
+    <div class= "inside_gen_content">
+        <h2 class ="slim_header_text">Develop</h2>
+        <p class="gen_cont_text">Join the worlds largest growing developers community and start developing now.Create something new or get ideas from others.</p>
+        <div class ="more_info button">
+            <a href="signup.php">Start now</a>
+        </div>
+    </div>
+    <div class= "inside_gen_content">
+        <h2 class="slim_header_text">Community</h2>
+        <p class= "gen_cont_text">Logarithm is the worlds first growing developers community.It is a community created in attempt to connect developers from all around the world.</p>
+        <div class ="more_info button">
+            <a href="bout.html">Learn more</a>
+        </div>
+    </div>
+</div>
+<div class="flex_row example">
+    <div class="example_item flex_item">
+        <img src= "static/img/_chat.png" width="100%" height="50%">
+        <div class="text_wrap_minimum">
+            <p>Real time chat with people all around the world. Discuss your ideas with others and give advice to others or ask for help.</p>
+        </div>
+    </div>
+    <div class="example_item flex_item">
+        <img src ="static/img/_blog.png" width="100%" height="50%">
+        <div class="text_wrap_minimum">
+            <p>Share your projects and ideas through blogs. Discover new projects by looking at blogs made by others and learn something new. </p>
+        </div>
+    </div>
+    <div class="example_item flex_item">
+        <img src= "static/img/_collaboration.png" width="100%" height="50%">
+        <div class="text_wrap_minimum">
+            <p >Follow people and collaborate with them on exciting projects. Help others with their plans,give advice or get help from other people to improve your current work. </p>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
+
+
+
+

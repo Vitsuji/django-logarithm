@@ -1,0 +1,38 @@
+.footer {
+    font-family: $content_font;
+    position: relative;
+    padding-top: 2%;
+    line-height: 1.5;
+    font-size: 12px;
+    border: $primary_border;
+    width: 98%;
+    height: 50px;
+    width: calc(100% - 2px);
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.inside_footer {
+    float:left;
+    margin-bottom:1.5%;
+    margin-left:5%;
+}
+
+.footer a{
+    text-decoration:none;
+    color:blue;
+}
+
+.inside_footer_left {
+    margin-left:20px;
+    margin-bottom:1.5%;
+    float:left;
+}
+
+.inside_footer_right {
+    margin-right:20px;
+    margin-bottom:1.5%;
+    float:right;
+}

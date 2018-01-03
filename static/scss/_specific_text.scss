@@ -1,0 +1,66 @@
+.slim_header_text {
+    font-size: 1.6em;
+    font-weight: 400;
+    font-family: $header_font;
+}
+
+.main_entry h1 {
+     padding-right:5px;
+     margin-bottom:0;
+}
+
+.main_entry p {
+    text-align: right;
+    margin:0;
+    margin-right:10%;
+    border:none;
+}
+
+.form_holder p {
+    color:white;
+    font-size:10px;
+    padding-bottom:25px;
+}
+
+.gen_cont_text {
+    letter-spacing:0.1em;
+    font-family: $content_font;
+
+    @include reverse_tablet {
+        width: 65%;
+        margin-left: 20%;
+        font-size:20px;
+        line-height: 1.5;
+    }
+    @include tablet {
+        width: 90%;
+        margin-left: 5%;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    @include mobile {
+        width: 65%;
+        width: 90%;
+        margin-left: 5%;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+}
+
+#mainp:first-letter{
+    font-size:1.3em;
+}
+
+.more_info a{
+    color: $expanse_color;
+    font-family: $content_font;
+    text-decoration:none;
+    font-size:1.5em;
+    padding: 0 20px;
+}
+
+.text_wrap_minimum p {
+    line-height: 1.4;
+    font-size: 20px;
+
+}

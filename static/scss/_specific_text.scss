@@ -1,7 +1,7 @@
 .slim_header_text {
     font-size: 1.6em;
     font-weight: 400;
-    font-family: $header_font;
+    font-family: $header-font;
 }
 
 .main_entry h1 {
@@ -24,7 +24,7 @@
 
 .gen_cont_text {
     letter-spacing:0.1em;
-    font-family: $content_font;
+    font-family: $content-font;
 
     @include reverse_tablet {
         width: 65%;
@@ -52,8 +52,8 @@
 }
 
 .more_info a{
-    color: $expanse_color;
-    font-family: $content_font;
+    color: $expanse-color;
+    font-family: $content-font;
     text-decoration:none;
     font-size:1.5em;
     padding: 0 20px;

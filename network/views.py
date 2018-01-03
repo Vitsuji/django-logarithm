@@ -9,10 +9,12 @@ from django.views.decorators.debug import sensitive_post_parameters
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
-class IndexView(generic.TemplateView):
-    template_name = "index.html"
+class IndexView(generic.CreateView):
+  template_name = "index.html"
+  form_class = UserCreationForm
+  success_url = "/login/"
 
-    
+
 class LoginView(generic.FormView):
   template_name = "login.html"
   form_class = AuthenticationForm

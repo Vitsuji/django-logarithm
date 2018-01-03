@@ -29,4 +29,9 @@
 
 {% block content %}
     <h1>Logarithm... in Django!</h1>
+    <form method="post" enctype='multipart/form-data'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Sign up">
+    </form>
 {% endblock %}

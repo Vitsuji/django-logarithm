@@ -11,7 +11,7 @@
 	border-radius: 10px;
 	outline: none;
 	padding: 10px;
-	font-family: $content_font;
+	font-family: $content-font;
 	font-size: 1em;
 	transition: border 0.5s;
 	-webkit-transition: border 0.5s;
@@ -30,7 +30,7 @@
 }
 
 .form_holder input:focus {
-	border: solid 3px $expanse_color;
+	border: solid 3px $expanse-color;
 }
 
 .button {
@@ -38,9 +38,9 @@
     outline:none;
 	border-radius : 6px;
 	padding : 10px 20px;
-    background-color: $secondary_color;
-    color: $expanse_color;
-    font-family: $content_font;
+    background-color: $secondary-color;
+    color: $expanse-color;
+    font-family: $content-font;
     margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
@@ -73,7 +73,7 @@
 }
 
 .btn-stylemob a {
-    color: $expanse_color;
+    color: $expanse-color;
     text-decoration: none;
     font-weight: 600;
 }

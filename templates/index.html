@@ -1,8 +1,6 @@
-
 {% extends "base.html" %}
 
 {% block content %}
-
 <div class="main_content">
     <div class ="main_entry">
         <h1>"If something does not exist - create it."</h1>
@@ -10,14 +8,10 @@
     </div>
     <div class="formgroup">
         <div class= "form_holder">
-            <form method="post">
-                <!--[if IE 8]><h3 style="color:white;text-align:center;">Username</h3><![endif]-->
-                <input placeholder="Username"type="text" class="front_maininput" onkeypress="on_enter(event, 'up');" name="username" required>
-                <!--[if IE 8]><h3 style="color:white;text-align:center;">Email</h3><![endif]-->
-                <input placeholder="Email"type="email" class="front_maininput" onkeypress="on_enter(event, 'up');"name="email" required/>
-                <!--[if IE 8]><h3 style="color:white;text-align:center;">Password</h3><![endif]-->
-                <input placeholder="Password"type="password" class="front_maininput"  onkeypress="on_enter(event, 'up');" name="password" required>
-                <div type="submit" name="btn" class="btn-style button" onclick="check_signup();">Sign Up and Start Developing</div>
+            <form method="post" enctype='multipart/form-data'>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Sign up and Start Developing">
             </form>
             <p>
                 <i>By signing up you agree to our Terms of Services and Privacy Policy</i>
@@ -42,7 +36,7 @@
         <div class ="more_info button">
             <a href="bout.html">Learn more</a>
         </div>
-p    </div>
+    </div>
 </div>
 <div class="flex_row example">
     <div class="example_item flex_item">
@@ -64,16 +58,4 @@ p    </div>
         </div>
     </div>
 </div>
-
-{% block content %}
-    <h1>Logarithm... in Django!</h1>
-    <form method="post" enctype='multipart/form-data'>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Sign up">
-    </form>
 {% endblock %}
-
-
-
-

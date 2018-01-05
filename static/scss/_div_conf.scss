@@ -1,12 +1,12 @@
 .main_content {
     width: 100%;
     height:100%;
-    background: $primary_color;
+    background: $primary-color;
 }
 
 .main_entry {
     padding: 5px;
-    color: $expanse_color;
+    color: $expanse-color;
 }
 
 .form_holder {
@@ -42,7 +42,7 @@
     padding-bottom: 5%;
 
     @include mobile {
-        border-bottom: $primary_border;
+        border-bottom: $primary-border;
     }
 }
 
@@ -74,8 +74,8 @@
 }
 
 .example_item {
-    border: $primary_border;
-    font-family: $content_font;
+    border: $primary-border;
+    font-family: $content-font;
     margin: 1%;
 
     @include mobile {

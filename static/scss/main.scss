@@ -1,5 +1,81 @@
 /* --------- Variables --------- */
-$var: 'sans';
-h1{
-    font-family: $var;
+$primary-color: #663399;
+$secondary-color: #069E2D;
+$abstraction-color: #d7d7d7;
+$expanse-color: #fff;
+$visible-abstraction-color: #8B8989;
+$active-button-important-color: green;
+
+$header-font: 'Josefin Slab', Josefin Slab, sans-serif;
+$content-font: 'Raleway', Raleway, sans-serif;
+
+$primary-border: 1px solid #d7d7d7;
+$primary-transition: 0.3s all;
+
+$bp-mobile: 680px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-widescreen: 1920px;
+$bp-quadhd: 3840px;
+
+/* [============] Mixins [============] */
+
+@mixin mobile {
+   @media (max-width: #{$bp-mobile}){
+    @content;
+  }
 }
+
+@mixin reverse_mobile {
+   @media (min-width: #{$bp-mobile}){
+    @content;
+  }
+}
+
+@mixin reverse_tablet {
+   @media (min-width: #{$bp-mobile}){
+    @content;
+  }
+}
+
+
+@mixin widescreen {
+  @media (min-width: #{$bp-desktop}) {
+   @content;
+ }
+}
+
+@mixin quadhd {
+  @media (min-width: #{$bp-widescreen}) and (max-width: #{$bp-quadhd}) {
+   @content;
+ }
+}
+
+@mixin tablet {
+   @media (min-width: #{$bp-mobile}) and (max-width: #{$bp-desktop - 1px}){
+    @content;
+  }
+}
+
+@mixin desktop {
+   @media (min-width: #{$bp-desktop}) and (max-width: #{$bp-widescreen}){
+    @content;
+  }
+}
+
+@mixin almanac-gradient($color) {
+    background: linear-gradient(to top left, lighten($color, 20%), $color) !important;
+}
+
+
+/* [============] Imports [============] */
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:400,700|Raleway');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@import "general";
+@import "navbar";
+@import "footer";
+@import "forms";
+@import "specific_text";
+@import "div_conf";

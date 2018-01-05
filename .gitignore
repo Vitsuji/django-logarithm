@@ -2,6 +2,3 @@ db.sqlite3
 *.pyc
 node_modules/
 package-lock.json
-static/js/
-static/scss/_general.scss
-static/scss/_navbar.scss
